@@ -9,6 +9,11 @@ function App() {
     <Header />
     <BikesPage />
     <Footer />
+
+
+
     </div>
-  )
+  );
 }
+
+export default App
