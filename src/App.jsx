@@ -4,7 +4,7 @@ import { Footer } from './Footer';
 import { Header } from './Header';
 import { BikesPage } from './BikesPage';
 
-axios.defaults.baseURL = import.meta.env.MODE === "development" ? "http://localhost:3000" : "bike-api-u20x.onrender.com";
+axios.defaults.baseURL = import.meta.env.MODE === "development" ? "http://localhost:3000" : "https://bike-api-u20x.onrender.com";
 
 function App() {
   return (
