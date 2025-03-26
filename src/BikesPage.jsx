@@ -9,7 +9,7 @@ export function BikesPage() {
   const handleIndex = () => {
     console.log('Retrieving Bike Information...');
 
-    axios.get('http://localhost:3000/bikes.json')
+    axios.get('/bikes.json')
     .then(function (response) {
       console.log(response.data);
       setBikes(response.data);
