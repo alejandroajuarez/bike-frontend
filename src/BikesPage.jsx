@@ -13,14 +13,22 @@ export function BikesPage() {
     .then(function (response) {
       console.log(response.data);
       setBikes(response.data);
-    })
-  }
+    });
+  };
+
+  const handleCreate = (params, successCallback) => {
+    console.log("handle Create");
+    axios.post("/bikes.json", params).then((response) => {
+      setBikes([...bikes, response.data]);
+      successCallback();
+    });
+  };
 
   useEffect(handleIndex, []);
 
   return (
     <div>
-      <BikesNew />
+      <BikesNew onCreate={handleCreate} />
       <BikesIndex bikes={bikes} />
     </div>
   );

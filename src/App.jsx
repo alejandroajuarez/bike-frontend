@@ -12,9 +12,6 @@ function App() {
     <Header />
     <BikesPage />
     <Footer />
-
-
-
     </div>
   );
 }

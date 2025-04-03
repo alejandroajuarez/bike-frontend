@@ -1,4 +1,8 @@
+import { Rating } from '@smastrom/react-rating'
+import { useState } from 'react';
+
 export function BikesIndex({ bikes }) {
+  const [rating, setRating] = useState(0)
   console.log(bikes);
   
   return (
@@ -15,6 +19,9 @@ export function BikesIndex({ bikes }) {
           <div>
             {/* bike price is hardcoded just for the example */}
             <h3>${bike.price}.99</h3>
+          </div>
+          <div className="rating">
+            <Rating value={rating} onChange={setRating} /> 
           </div>
           <div>
             <p>{bike.description}</p>
